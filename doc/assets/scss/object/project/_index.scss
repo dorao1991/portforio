@@ -1,0 +1,490 @@
+%p-index-icontitle {
+  font-size: rem(36);
+  line-height: 1.5;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.p-index-mv {
+  height: 100vh;
+  background-image: url(../img/main-visual.png);
+  background-size: cover;
+  background-position: center;
+  @include flexCentering();
+  &__catchcopy {
+    width: 50%;
+    @include mq(lg) {
+      width: 80%;
+    }
+  }
+  &__text {
+    color: $c-white;
+    font-size: rem(24);
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.p-index-profile {
+  background-color: $bg-accent;
+  &__inner {
+    @include container();
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 96px;
+    @include mq(md) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__aboutme {
+    margin-bottom: 96px;
+  }
+
+  &__aboutme-inner {
+    display: flex;
+    max-width: 882px;
+    margin: 0 auto;
+    @include mq(lg) {
+      max-width: 90%;
+    }
+    @include mq(md) {
+      width: 100%;
+    }
+
+    @include mq(md) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__aboutme-picturearea {
+    @include mq(md) {
+      margin-bottom: 48px;
+    }
+  }
+  &__aboutme-picture {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    //background-image: url(assets/img/profile-img.jpg)
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
+  }
+  &__aboutme-name {
+    font-size: rem(32);
+    color: $c-main;
+    font-weight: bold;
+    text-align: center;
+  }
+  &__aboutme-textarea {
+    margin-left: 50px;
+    @include mq(md) {
+      margin-left: 0px;
+    }
+  }
+  &__aboutme-title {
+    font-size: rem(27);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    @include mq(md) {
+      text-align: center;
+    }
+  }
+  &__aboutme-text {
+    font-size: rem(18);
+    @include mq(sm) {
+      font-size: 14px;
+    }
+  }
+
+  &__career-inner {
+    max-width: 882px;
+    margin: 0 auto;
+    @include mq(lg) {
+      max-width: 90%;
+    }
+    @include mq(md) {
+      width: 100%;
+    }
+
+    @include mq(md) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__career-title-wrap {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px $c-border solid;
+    padding-bottom: 0.25rem;
+    margin-bottom: 36px;
+  }
+  &__career-title {
+    @extend %p-index-icontitle;
+  }
+  &__career-img-wrap {
+    width: rem(40);
+  }
+  &__timeline-title {
+    color: $c-main;
+    font-size: rem(32);
+    font-weight: bold;
+    margin-bottom: 48px;
+  }
+  &__timeline-events {
+    margin: 0 auto;
+    position: relative;
+    width: 80%;
+    @include mq(md) {
+      width: 100%;
+    }
+    // TIMELINEの縦線
+    &:before {
+      background-color: #000;
+      content: "";
+      margin-left: -1px;
+      position: absolute;
+      top: 0;
+      left: 2em;
+      width: 2px;
+      height: 100%;
+    }
+  }
+  &__timeline-event {
+    position: relative;
+    // 先頭のみ上に空白を設ける
+    &:first-child {
+      padding-top: 50px;
+      // 先頭の菱形の位置を調整
+      .p-index-profile__timeline-event-icon {
+        top: 36px;
+      }
+    }
+    // TIMELINEの列にホバーしたら菱形を傾けて菱形とサムネイルの色を変える
+    &:hover {
+      .p-index-profile__timeline-event-icon {
+        transform: rotate(-45deg);
+        background-color: $c-main;
+      }
+      .p-index-profile__timeline-event-thumbnail {
+        box-shadow: inset 40em 0 0 0 $c-main;
+      }
+    }
+  }
+
+  &__timeline-event-icon {
+    transition: transform 0.2s ease-in;
+    transform: rotate(45deg);
+    background-color: #000;
+    display: block;
+    margin: 0.5em 0.5em 0.5em -0.5em;
+    position: absolute;
+    top: -14px;
+    left: 2em;
+    width: 1em;
+    height: 1em;
+  }
+
+  &__timeline-event-copy {
+    padding: 18px 0;
+    position: relative;
+    top: -1.875em;
+    left: 4em;
+    width: 80%;
+  }
+
+  &__timeline-event-thumbnail {
+    transition: box-shadow 0.5s ease-in 0.1s;
+    color: #fff;
+    font-size: 0.75em;
+    background-color: #000;
+    box-shadow: inset 0 0 0 0em #96c7ff;
+    display: inline-block;
+    margin-bottom: 1.2em;
+    padding: 0.25em 1em 0.2em 1em;
+  }
+
+  &__timeline-event-text {
+    font-size: rem(20);
+  }
+
+  &__timeline-event-icon-top {
+    background-color: #fff;
+    display: block;
+    margin: 0.5em 0.5em 0.5em -0.5em;
+    position: absolute;
+    top: -1em;
+    left: 2em;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: black 2px solid;
+  }
+
+  &__timeline-event-icon-bottom {
+    background-color: #fff;
+    display: block;
+    margin: 0.5em 0.5em 0.5em -0.5em;
+    position: absolute;
+    bottom: -1em;
+    left: 2em;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: black 2px solid;
+  }
+  &__timeline-now {
+    font-size: rem(24);
+    font-weight: bold;
+    color: $c-main;
+    position: absolute;
+    top: -15px;
+    left: -40px;
+    @include mq(md) {
+      left: -20px;
+    }
+    @include mq(sm) {
+      top: -10px;
+    }
+  }
+}
+
+.p-index-skill {
+  background-color: $c-white;
+
+  &__inner {
+    @include container();
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  &__skill-list {
+    margin: 0 auto;
+    margin-bottom: 96px;
+    @include mq(lg) {
+      max-width: 90%;
+    }
+    @include mq(md) {
+      width: 100%;
+    }
+  }
+  &__heading {
+    text-align: center;
+    margin-bottom: 96px;
+    @include mq(md) {
+      margin-bottom: 48px;
+    }
+  }
+  &__skill-list-inner {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &__skill {
+    width: 28%;
+    text-align: center;
+    margin-bottom: 24px;
+    @include mq(md) {
+      width: 40%;
+      margin-bottom: 24px;
+    }
+    @include mq(sm) {
+      width: 80%;
+      margin-bottom: 40px;
+    }
+  }
+  &__skill-img {
+    height: 150px;
+    margin-bottom: 10px;
+    @include mq(lg) {
+      height: 100px;
+    }
+  }
+  &__skill-name {
+    font-size: rem(27);
+    font-weight: bold;
+  }
+  &__skill-year {
+    font-size: rem(19);
+    font-weight: bold;
+    margin-bottom: 16px;
+    @include mq(md) {
+      margin-bottom: 10px;
+    }
+  }
+  &__skill-text {
+    text-align: left;
+    font-size: rem(18);
+  }
+
+  // その他のスキル
+
+  &__more-skill-inner {
+    max-width: 882px;
+    margin: 0 auto;
+    @include mq(lg) {
+      max-width: 90%;
+    }
+    @include mq(md) {
+      width: 100%;
+    }
+  }
+  &__more-skill-title-wrap {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px $c-border solid;
+    padding-bottom: 0.25rem;
+    margin-bottom: 36px;
+  }
+  &__more-skill-title {
+    @extend %p-index-icontitle;
+  }
+  &__more-skill-img-wrap {
+    width: rem(40);
+  }
+  &__more-skill-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 24px;
+  }
+  &__more-skill-item-img-wrap {
+    width: 32px;
+    // Flexコンテナ内で知事まないように
+    flex-shrink: 0;
+    @include mq(md) {
+      width: 24px;
+    }
+  }
+  &__more-skill-item-textarea {
+    margin-left: 16px;
+    @include mq(md) {
+      margin-left: 8px;
+    }
+  }
+  &__more-skill-item-title {
+    font-size: rem(27);
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  &__more-skill-item-text {
+    font-size: rem(18);
+  }
+}
+
+.p-index-works {
+  background-color: $bg-accent;
+
+  &__inner {
+    @include container();
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  &__heading {
+    text-align: center;
+    margin-bottom: 96px;
+    @include mq(md) {
+      margin-bottom: 48px;
+    }
+  }
+  &__heading-text {
+    font-size: rem(18);
+    margin-top: 21px;
+  }
+  &__list-inner {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 28%;
+    margin-bottom: 72px;
+    @include mq(md) {
+      width: 40%;
+    }
+    @include mq(sm) {
+      width: 80%;
+    }
+  }
+  &__content-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    margin-bottom: 16px;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  &__content-text {
+    font-size: rem(18);
+    @include mq(sm) {
+      font-size: 14px;
+    }
+  }
+  &__button {
+    text-align: center;
+  }
+}
+
+.p-index-contact {
+  &__inner {
+    @include container();
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 96px;
+    @include mq(md) {
+      margin-bottom: 48px;
+    }
+  }
+  &__heading-text {
+    font-size: rem(18);
+    margin-top: 21px;
+  }
+  &__form {
+    max-width: 600px;
+    margin: 0 auto;
+    @include mq(md) {
+      width: 100%;
+    }
+    @include mq(sm) {
+      width: 100%;
+    }
+  }
+  &__form-item-wrapper {
+    @include flexCentering(space-between);
+    margin-bottom: 50px;
+    @include mq(sm) {
+      display: block;
+    }
+  }
+  &__form-label {
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  &__form-input {
+    width: 60%;
+    height: 2em;
+    padding-left: 10px;
+    @include mq(sm) {
+      width: 100%;
+    }
+    &--longtall {
+      height: 10em;
+    }
+  }
+}

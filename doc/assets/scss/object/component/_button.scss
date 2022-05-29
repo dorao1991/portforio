@@ -1,0 +1,33 @@
+.c-button {
+  position: relative;
+  padding: 1em;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  background-color: $c-main;
+  color: $c-white;
+  transition: 0.3s;
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("/assets/img/chevron-thin-right.png") no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 20px;
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+  &--medium {
+    width: 60%;
+    max-width: 492px;
+    @include mq(sm) {
+      width: 80%;
+    }
+  }
+}

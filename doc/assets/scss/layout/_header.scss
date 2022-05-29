@@ -1,0 +1,149 @@
+.l-header {
+  height: 100px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: $c-white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05); /*これを付け足し*/
+  &__inner {
+    @include container();
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo-img {
+    width: 234px;
+  }
+  &__list {
+    display: flex;
+    @include mq(md) {
+      display: none;
+    }
+  }
+  &__item {
+    margin-right: 20px;
+    font-family: $noto-serif;
+    position: relative;
+    display: inline-block;
+    &::after {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background: $c-main;
+      transform: scale(0, 1);
+      transform-origin: left top;
+      transition: transform 0.3s;
+    }
+    &:hover::after {
+      transform: scale(1, 1);
+    }
+  }
+  &__item-maintitle {
+    font-weight: bold;
+    font-size: rem(24);
+  }
+  &__item-subtitle {
+    font-size: rem(12);
+    text-align: center;
+  }
+  /* ハンバーガーメニュー */
+  &__hamberger {
+    width: 48px;
+    height: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 9999;
+    display: none;
+    position: relative;
+    @include mq(md) {
+      display: block;
+    }
+    &.active {
+      // ハンバーガーメニューをクリックした状態でのスタイル
+      .l-header__hamberger-line {
+        background-color: $c-white;
+        // 上から一本目のスタイル
+        &:nth-child(1) {
+          top: 5px;
+          transform: rotate(45deg);
+        }
+        // 上から二本目のスタイル
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        // 上から三本目のスタイル
+        &:nth-child(3) {
+          top: -13px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  /* ハンバーガーメニューの線 */
+  &__hamberger-line {
+    width: 100%;
+    height: 1px;
+    background-color: $c-black;
+    position: relative;
+    transition: ease 0.4s;
+    display: block;
+    // 上から一本目のスタイル
+    &:nth-child(1) {
+      top: 0;
+    }
+    // 上から二本目のスタイル
+    &:nth-child(2) {
+      margin: 8px 0;
+    }
+    // 上から三本目のスタイル
+    &:nth-child(3) {
+      top: 0;
+    }
+  }
+  &__sp-nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    background-color: $c-main;
+    transition: ease 0.4s;
+    @include mq(md) {
+      display: block;
+    }
+    /* ハンバーガーメニュークリック後のスタイル */
+    &.active {
+      transform: translateX(0);
+    }
+  }
+  &__sp-nav-items {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    color: $c-white;
+  }
+  &__sp-nav-item {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  &__sp-nav-item-main {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.4;
+  }
+  &__sp-nav-item-sub {
+    font-size: 16px;
+  }
+}

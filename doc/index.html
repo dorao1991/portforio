@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- CSS, JavaScript -->
+    <!-- <script src="/assets/js/application.js?<?php echo date("YmdHis"); ?>" defer></script> -->
+    <script src="/assets/js/application.js" defer></script>
+    <!-- <link rel="stylesheet" href="/assets/css/style.css?<?php echo date("YmdHis"); ?>"> -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- WebFont -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet"> -->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+
+    <!-- Other -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- OGP -->
+    <meta property="og:title" content="__SiteTitle__" />
+    <meta property="og:description" content="__SiteDescription__" />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:url" content="<?php echo (empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>"> -->
+    <meta property="og:url" content="__SiteURL__" />
+    <meta property="og:image" content="__SiteURL__/assets/img/ogp.jpg" />
+    <meta property="og:site_name" content="__SiteTitle__" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="fb:app_id" content="" />
+
+    <title>Tokonami Hiroki Portforio.</title>
+    <meta name="description" content="__SiteDescription__" />
+  </head>
+
+  <body>
+    <div class="l-wrapper">
+      <header class="l-header">
+        <div class="l-header__inner">
+          <div class="l-header__logo">
+            <a class="l-header__logo-link" href="#">
+              <img
+                class="l-header__logo-img"
+                src="assets/img/logo-black.png"
+                alt="ロゴ"
+              />
+            </a>
+          </div>
+          <nav class="l-header__nav">
+            <ul class="l-header__list">
+              <li class="l-header__item">
+                <a class="l-header__item-link" href="#">
+                  <p class="l-header__item-maintitle">PROFILE</p>
+                  <p class="l-header__item-subtitle">プロフィール</p>
+                </a>
+              </li>
+              <li class="l-header__item">
+                <a class="l-header__item-link" href="#">
+                  <p class="l-header__item-maintitle">SKILL</p>
+                  <p class="l-header__item-subtitle">スキル</p>
+                </a>
+              </li>
+              <li class="l-header__item">
+                <a class="l-header__item-link" href="#">
+                  <p class="l-header__item-maintitle">WORKS</p>
+                  <p class="l-header__item-subtitle">実績</p>
+                </a>
+              </li>
+              <li class="l-header__item">
+                <a class="l-header__item-link" href="#">
+                  <p class="l-header__item-maintitle">CONTACT</p>
+                  <p class="l-header__item-subtitle">お問い合わせ</p>
+                </a>
+              </li>
+            </ul>
+            <button class="l-header__hamberger js-hamburger">
+              <span class="l-header__hamberger-line"></span>
+              <span class="l-header__hamberger-line"></span>
+              <span class="l-header__hamberger-line"></span>
+            </button>
+          </nav>
+        </div>
+        <nav class="l-header__sp-nav js-nav">
+          <ul class="l-header__sp-nav-items">
+            <li class="l-header__sp-nav-item">
+              <a href="">
+                <p class="l-header__sp-nav-item-main">PROFILE</p>
+                <p class="l-header__sp-nav-item-sub">プロフィール</p>
+              </a>
+            </li>
+            <li class="l-header__sp-nav-item">
+              <a href="">
+                <p class="l-header__sp-nav-item-main">SKILL</p>
+                <p class="l-header__sp-nav-item-sub">スキル</p>
+              </a>
+            </li>
+            <li class="l-header__sp-nav-item">
+              <a href="">
+                <p class="l-header__sp-nav-item-main">WORKS</p>
+                <p class="l-header__sp-nav-item-sub">実績</p>
+              </a>
+            </li>
+            <li class="l-header__sp-nav-item">
+              <a href="">
+                <p class="l-header__sp-nav-item-main">CONTACT</p>
+                <p class="l-header__sp-nav-item-sub">お問い合わせ</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="l-main">
+        <section class="p-index-mv">
+          <div class="p-index-mv__catchcopy">
+            <h1 class="p-index-mv__title-img">
+              <img
+                class="p-index-mv__logo-img"
+                src="assets/img/logo-white.png"
+                alt="Tokonami Hirokiのポートフォリオサイト"
+              />
+            </h1>
+            <p class="p-index-mv__text">
+              ユーザーとお客様が心から満足できるサイトをお作りいたします。<br />デザインとコーディングはおまかせください。
+            </p>
+          </div>
+        </section>
+        <section class="p-index-profile">
+          <div class="p-index-profile__inner">
+            <div class="p-index-profile__heading">
+              <div class="c-heading">
+                <h2 class="c-heading__title">PROFILE</h2>
+                <p class="c-heading__subtitle">プロフィール</p>
+              </div>
+            </div>
+            <section class="p-index-profile__aboutme">
+              <div class="p-index-profile__aboutme-inner">
+                <div class="p-index-profile__aboutme-picturearea">
+                  <div
+                    class="p-index-profile__aboutme-picture"
+                    style="background-image: url(assets/img/profile-img.jpg)"
+                  ></div>
+                  <p class="p-index-profile__aboutme-name">Tokonami Hiroki</p>
+                </div>
+                <div class="p-index-profile__aboutme-textarea">
+                  <h3 class="p-index-profile__aboutme-title">
+                    エンジニアとして働きながらWeb制作に挑戦
+                  </h3>
+                  <p class="p-index-profile__aboutme-text">
+                    1991年生まれの30歳。
+                    2016年に通信機器メーカーに入社後エンジニアとして勤務を開始し、主に通信機器を操作する為のWeb周りの開発を担当。
+                    2020年頃、趣味であるサーフィン繋がりから知り合いのサーフショップのWebサイト制作を頼まれたことをきっかけに、2021年頃から本格的にWeb制作の活動を行なう。
+                    エンジニア職で培ったコーディング力やWeb技術の知見を活かしつつ、デザインにも挑戦し幅広いスキルを持ったエンジニアを目指す。
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="p-index-profile__career">
+              <div class="p-index-profile__career-inner">
+                <div class="p-index-profile__career-title-wrap">
+                  <div class="p-index-profile__career-img-wrap">
+                    <img
+                      class="p-index-profile__career-img"
+                      src="assets/img/career-logo.png"
+                      alt="キャリアロゴ"
+                    />
+                  </div>
+                  <h2 class="p-index-profile__career-title">
+                    詳しい経歴について
+                  </h2>
+                </div>
+                <div class="p-index-profile__timeline">
+                  <p class="p-index-profile__timeline-title">TIMELINE</p>
+
+                  <ul class="p-index-profile__timeline-events">
+                    <li class="p-index-profile__timeline-event">
+                      <label
+                        class="p-index-profile__timeline-event-icon-top"
+                      ></label>
+                      <label
+                        class="p-index-profile__timeline-event-icon"
+                      ></label>
+                      <div class="p-index-profile__timeline-event-copy">
+                        <p class="p-index-profile__timeline-event-thumbnail">
+                          2016 / 04
+                        </p>
+                        <p class="p-index-profile__timeline-event-text">
+                          移動体通信技術向けの通信計測機メーカーに入社
+                        </p>
+                      </div>
+                    </li>
+                    <li class="p-index-profile__timeline-event">
+                      <label
+                        class="p-index-profile__timeline-event-icon"
+                      ></label>
+                      <div class="p-index-profile__timeline-event-copy">
+                        <p class="p-index-profile__timeline-event-thumbnail">
+                          2016/05
+                        </p>
+                        <p class="p-index-profile__timeline-event-text">
+                          未経験から研修を通して初めてプログラミング(C言語)に触れる
+                        </p>
+                      </div>
+                    </li>
+                    <li class="p-index-profile__timeline-event">
+                      <label
+                        class="p-index-profile__timeline-event-icon"
+                      ></label>
+                      <div class="p-index-profile__timeline-event-copy">
+                        <p class="p-index-profile__timeline-event-thumbnail">
+                          2017/08
+                        </p>
+                        <p class="p-index-profile__timeline-event-text">
+                          通信機器の開発プロジェクトにアサインされる。主にAPI周りを担当。
+                        </p>
+                      </div>
+                    </li>
+                    <li class="p-index-profile__timeline-event">
+                      <label
+                        class="p-index-profile__timeline-event-icon"
+                      ></label>
+                      <div class="p-index-profile__timeline-event-copy">
+                        <p class="p-index-profile__timeline-event-thumbnail">
+                          2017/09〜2020/09
+                        </p>
+                        <p class="p-index-profile__timeline-event-text">
+                          通信機器のバージョンアップにおける、機能追加/不具合対応を担当
+                        </p>
+                      </div>
+                    </li>
+                    <li class="p-index-profile__timeline-event">
+                      <label
+                        class="p-index-profile__timeline-event-icon"
+                      ></label>
+                      <div class="p-index-profile__timeline-event-copy">
+                        <p class="p-index-profile__timeline-event-thumbnail">
+                          2020/09
+                        </p>
+                        <p class="p-index-profile__timeline-event-text">
+                          通信機器のリプレイス開発において、API設計/実装を担当
+                        </p>
+                      </div>
+                    </li>
+                    <li class="p-index-profile__timeline-event">
+                      <label
+                        class="p-index-profile__timeline-event-icon"
+                      ></label>
+                      <div class="p-index-profile__timeline-event-copy">
+                        <p class="p-index-profile__timeline-event-thumbnail">
+                          2021/05
+                        </p>
+                        <p class="p-index-profile__timeline-event-text">
+                          副業としてWeb制作を開始
+                        </p>
+                      </div>
+                    </li>
+                    <li class="p-index-profile__timeline-event">
+                      <label
+                        class="p-index-profile__timeline-event-icon"
+                      ></label>
+                      <div class="p-index-profile__timeline-event-copy">
+                        <p class="p-index-profile__timeline-event-thumbnail">
+                          2021/06
+                        </p>
+                        <p class="p-index-profile__timeline-event-text">
+                          通信機器のGUI改修を一部担当。本業でもフロントエンド開発に携わるようになる
+                        </p>
+                      </div>
+                    </li>
+                    <li class="p-index-profile__timeline-event">
+                      <label
+                        class="p-index-profile__timeline-event-icon"
+                      ></label>
+                      <div class="p-index-profile__timeline-event-copy">
+                        <p class="p-index-profile__timeline-event-thumbnail">
+                          2021/11
+                        </p>
+                        <p class="p-index-profile__timeline-event-text">
+                          Web制作にて初案件を受注
+                        </p>
+                      </div>
+                    </li>
+                    <li class="p-index-profile__timeline-event">
+                      <label
+                        class="p-index-profile__timeline-event-icon"
+                      ></label>
+                      <div class="p-index-profile__timeline-event-copy">
+                        <p class="p-index-profile__timeline-event-thumbnail">
+                          2022/05
+                        </p>
+                        <p class="p-index-profile__timeline-event-text">
+                          Web制作/Web開発をメインとした会社へ転職活動を決意
+                        </p>
+                      </div>
+                      <p class="p-index-profile__timeline-now">Now</p>
+                      <label
+                        class="p-index-profile__timeline-event-icon-bottom"
+                      ></label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+        <section class="p-index-skill">
+          <div class="p-index-skill__inner">
+            <div class="p-index-skill__heading">
+              <div class="c-heading">
+                <h2 class="c-heading__title">SKILL</h2>
+                <p class="c-heading__subtitle">スキル</p>
+              </div>
+            </div>
+            <div class="p-index-skill__skill-list">
+              <ul class="p-index-skill__skill-list-inner">
+                <li class="p-index-skill__skill">
+                  <div class="p-index-skill__skill-img-wrap">
+                    <img
+                      class="p-index-skill__skill-img"
+                      src="assets/img/htmlcss-icon.png"
+                      alt="PHPアイコン"
+                    />
+                    <p class="p-index-skill__skill-name">HTML/CSS</p>
+                    <p class="p-index-skill__skill-year">
+                      経験年数 <span class="u-color-main">3年</span>
+                    </p>
+                    <p class="p-index-skill__skill-text">
+                      デザインカンプからコーディングを行うことが出来ます。CSS設計を習得しており、保守性の高いコードを書くことが出来ます。
+                    </p>
+                  </div>
+                </li>
+                <li class="p-index-skill__skill">
+                  <div class="p-index-skill__skill-img-wrap">
+                    <img
+                      class="p-index-skill__skill-img"
+                      src="assets/img/js-icon.png"
+                      alt="JavaScriptアイコン"
+                    />
+                    <p class="p-index-skill__skill-name">JavaScript/JQuery</p>
+                    <p class="p-index-skill__skill-year">
+                      経験年数 <span class="u-color-main">1年〜</span>
+                    </p>
+                    <p class="p-index-skill__skill-text">
+                      Webサイトにアニメーションを加えることが出来ます。また、Vue.jsを使用したSPA開発の経験があります。
+                    </p>
+                  </div>
+                </li>
+                <li class="p-index-skill__skill">
+                  <div class="p-index-skill__skill-img-wrap">
+                    <img
+                      class="p-index-skill__skill-img"
+                      src="assets/img/wordpress-icon.png"
+                      alt="WordPressアイコン"
+                    />
+                    <p class="p-index-skill__skill-name">WordPress</p>
+                    <p class="p-index-skill__skill-year">
+                      経験年数 <span class="u-color-main">2年〜</span>
+                    </p>
+                    <p class="p-index-skill__skill-text">
+                      オリジナルテーマの開発、テーマのカスタマイズが出来ます。
+                      当サイトもオリジナルテーマとしてWordPress管理画面から修正や追加を行うようにしています。
+                    </p>
+                  </div>
+                </li>
+                <li class="p-index-skill__skill">
+                  <div class="p-index-skill__skill-img-wrap">
+                    <img
+                      class="p-index-skill__skill-img"
+                      src="assets/img/php-icon.png"
+                      alt="PHPアイコン"
+                    />
+                    <p class="p-index-skill__skill-name">WordPress</p>
+                    <p class="p-index-skill__skill-year">
+                      経験年数 <span class="u-color-main">4年〜</span>
+                    </p>
+                    <p class="p-index-skill__skill-text">
+                      PHPを使用したサーバーサイド開発が出来ます。Laravelを使用したAPI開発の経験もあります。
+                    </p>
+                  </div>
+                </li>
+                <li class="p-index-skill__skill">
+                  <div class="p-index-skill__skill-img-wrap">
+                    <img
+                      class="p-index-skill__skill-img"
+                      src="assets/img/adobe-icon.png"
+                      alt="Adobeアイコン"
+                    />
+                    <p class="p-index-skill__skill-name">Photoshop/XD</p>
+                    <p class="p-index-skill__skill-year">
+                      経験年数 <span class="u-color-main">2年〜</span>
+                    </p>
+                    <p class="p-index-skill__skill-text">
+                      PhotoshopやXDを使用してデザインカンプを作成することが出来ます。
+                      当サイトも自らワイヤーフレームからデザインカンプを作成しデザインしました。
+                    </p>
+                  </div>
+                </li>
+                <li class="p-index-skill__skill">
+                  <div class="p-index-skill__skill-img-wrap">
+                    <img
+                      class="p-index-skill__skill-img"
+                      src="assets/img/git-icon.png"
+                      alt="Gitアイコン"
+                    />
+                    <p class="p-index-skill__skill-name">Git</p>
+                    <p class="p-index-skill__skill-year">
+                      経験年数 <span class="u-color-main">6年〜</span>
+                    </p>
+                    <p class="p-index-skill__skill-text">
+                      Gitを使用したチーム開発が出来ます。
+                      コマンド操作はもちろん、チーム内におけるマージトラブルを対応した経験もあります。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="p-index-skill__more-skill">
+              <div class="p-index-skill__more-skill-inner">
+                <div class="p-index-skill__more-skill-title-wrap">
+                  <div class="p-index-skill__more-skill-img-wrap">
+                    <img
+                      class="p-index-skill__more-skill-img"
+                      src="assets/img/skill-logo.png"
+                      alt="スキルロゴ"
+                    />
+                  </div>
+                  <h2 class="p-index-skill__more-skill-title">
+                    その他のスキルについて
+                  </h2>
+                </div>
+                <ul class="p-index-skill__more-skill-list">
+                  <li class="p-index-skill__more-skill-item">
+                    <div class="p-index-skill__more-skill-item-img-wrap">
+                      <img
+                        class="p-index-skill__more-skill-item-img"
+                        src="assets/img/check-logo.png"
+                        alt="チェックロゴ"
+                      />
+                    </div>
+                    <div class="p-index-skill__more-skill-item-textarea">
+                      <p class="p-index-skill__more-skill-item-title">
+                        Linux環境での開発経験
+                      </p>
+                      <p class="p-index-skill__more-skill-item-text">
+                        Linuxで環境で開発した経験があり、基本的なコマンド操作が可能です。LinuxOSに対する知識を保有しています。
+                      </p>
+                    </div>
+                  </li>
+                  <li class="p-index-skill__more-skill-item">
+                    <div class="p-index-skill__more-skill-item-img-wrap">
+                      <img
+                        class="p-index-skill__more-skill-item-img"
+                        src="assets/img/check-logo.png"
+                        alt="チェックロゴ"
+                      />
+                    </div>
+                    <div class="p-index-skill__more-skill-item-textarea">
+                      <p class="p-index-skill__more-skill-item-title">
+                        通信ネットワーク技術
+                      </p>
+                      <p class="p-index-skill__more-skill-item-text">
+                        通信機器の開発の経験からTCP/IPやEthernetに関する一般的な知識を保有しています。
+                      </p>
+                    </div>
+                  </li>
+                  <li class="p-index-skill__more-skill-item">
+                    <div class="p-index-skill__more-skill-item-img-wrap">
+                      <img
+                        class="p-index-skill__more-skill-item-img"
+                        src="assets/img/check-logo.png"
+                        alt="チェックロゴ"
+                      />
+                    </div>
+                    <div class="p-index-skill__more-skill-item-textarea">
+                      <p class="p-index-skill__more-skill-item-title">
+                        SQLを用いたアプリケーション開発経験
+                      </p>
+                      <p class="p-index-skill__more-skill-item-text">
+                        SQLiteとpostgreSQLを使用し開発を行なった経験があり、SQL文に対する知識を保有しています。
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="p-index-works">
+          <div class="p-index-works__inner">
+            <div class="p-index-works__heading">
+              <div class="c-heading">
+                <h2 class="c-heading__title">WORK</h2>
+                <p class="c-heading__subtitle">実績</p>
+              </div>
+              <p class="p-index-works__heading-text">
+                今までに制作した実績を掲載します
+              </p>
+            </div>
+            <div class="p-index-works__list">
+              <ul class="p-index-works__list-inner">
+                <li class="p-index-works__item">
+                  <a
+                    class="p-index-works__content-img"
+                    style="background-image: url(assets/img/wayukai.png)"
+                    href="#"
+                  ></a>
+                  <p class="p-index-works__content-text">
+                    NPO法人 和有会様のWebサイトリニューアル
+                  </p>
+                </li>
+                <li class="p-index-works__item">
+                  <a
+                    class="p-index-works__content-img"
+                    style="background-image: url(assets/img/portforio.png)"
+                    href="#"
+                  ></a>
+                  <p class="p-index-works__content-text">
+                    当ポートフォリオサイトの制作
+                  </p>
+                </li>
+                <li class="p-index-works__item">
+                  <a
+                    class="p-index-works__content-img"
+                    style="
+                      background-image: url(assets/img/valentaine-banner.png);
+                    "
+                    href="#"
+                  ></a>
+                  <p class="p-index-works__content-text">
+                    バレンタイン向けバナー制作
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="p-index-works__button">
+              <a href="#!" class="c-button c-button--medium">実績一覧</a>
+            </div>
+          </div>
+        </section>
+        <section class="p-index-contact">
+          <div class="p-index-contact__inner">
+            <div class="p-index-contact__heading">
+              <div class="c-heading">
+                <h2 class="c-heading__title">CONTACT</h2>
+                <p class="c-heading__subtitle">お問い合わせ</p>
+              </div>
+              <p class="p-index-contact__heading-text">
+                お仕事のご依頼、ご相談などお気軽にご連絡ください
+              </p>
+            </div>
+            <div class="p-index-contact__form">
+              <div class="p-index-contact__form-item-wrapper">
+                <label class="p-index-contact__form-label" for="name"
+                  >氏名・会社名</label
+                >
+                <input
+                  class="p-index-contact__form-input"
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="氏名・会社名を入力してください"
+                />
+              </div>
+              <div class="p-index-contact__form-item-wrapper">
+                <label class="p-index-contact__form-label" for="e-mail"
+                  >メールアドレス</label
+                >
+                <input
+                  class="p-index-contact__form-input"
+                  id="e-mail"
+                  type="email"
+                  name="email"
+                  placeholder="メールアドレスを入力してください"
+                />
+              </div>
+              <div class="p-index-contact__form-item-wrapper">
+                <label class="p-index-contact__form-label" for="message"
+                  >お問い合わせ内容</label
+                >
+                <textarea
+                  class="p-index-contact__form-input p-index-contact__form-input--longtall"
+                  placeholder="お問い合わせ内容を入力してください"
+                  id="message"
+                  name="comment"
+                ></textarea>
+              </div>
+              <a href="#!" class="c-button">送信</a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="l-footer">
+        <div class="l-footer__inner">
+          <small class="l-footer__copyright"
+            >©️ 2022 TokonamiHiroki Portforio</small
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
