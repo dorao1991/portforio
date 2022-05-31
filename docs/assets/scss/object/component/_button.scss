@@ -21,7 +21,13 @@
     right: 20px;
   }
   &:hover {
-    opacity: 0.6;
+    background-color: $c-white;
+    color: $c-main;
+    border: 2px solid $c-main;
+  }
+  &:hover:after {
+    background: url("/assets/img/chevron-thin-right_revers.png") no-repeat;
+    background-size: contain;
   }
   &--medium {
     width: 60%;

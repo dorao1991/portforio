@@ -138,6 +138,14 @@
     font-size: rem(32);
     font-weight: bold;
     margin-bottom: 48px;
+    &.visible,
+    &.invisible {
+      transform: translateX(0);
+      transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    &.invisible {
+      transform: translateX(-100px);
+    }
   }
   &__timeline-events {
     margin: 0 auto;
@@ -253,6 +261,14 @@
     }
     @include mq(sm) {
       top: -10px;
+    }
+    &.visible,
+    &.invisible {
+      transform: translateX(0);
+      transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    &.invisible {
+      transform: translateX(-100px);
     }
   }
 }
@@ -413,6 +429,9 @@
       width: 80%;
     }
   }
+  &__content-img-wrapper {
+    overflow: hidden;
+  }
   &__content-img {
     display: block;
     width: 100%;
@@ -421,8 +440,11 @@
     background-size: cover;
     background-position: top center;
     margin-bottom: 16px;
+    transition: 0.5s all;
     &:hover {
       opacity: 0.6;
+      transform: scale(1.1, 1.1);
+      transition: 0.5s all;
     }
   }
   &__content-text {

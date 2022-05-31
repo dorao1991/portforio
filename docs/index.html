@@ -5,6 +5,15 @@
 
     <!-- CSS, JavaScript -->
     <!-- <script src="/assets/js/application.js?<?php echo date("YmdHis"); ?>" defer></script> -->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.3/ScrollTrigger.min.js"
+      defer
+    ></script>
+
     <script src="/assets/js/application.js" defer></script>
     <!-- <link rel="stylesheet" href="/assets/css/style.css?<?php echo date("YmdHis"); ?>"> -->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -54,25 +63,41 @@
           <nav class="l-header__nav">
             <ul class="l-header__list">
               <li class="l-header__item">
-                <a class="l-header__item-link" href="#">
+                <a
+                  class="l-header__item-link"
+                  href="#"
+                  data-target=".p-index-profile"
+                >
                   <p class="l-header__item-maintitle">PROFILE</p>
                   <p class="l-header__item-subtitle">プロフィール</p>
                 </a>
               </li>
               <li class="l-header__item">
-                <a class="l-header__item-link" href="#">
+                <a
+                  class="l-header__item-link"
+                  href="#"
+                  data-target=".p-index-skill"
+                >
                   <p class="l-header__item-maintitle">SKILL</p>
                   <p class="l-header__item-subtitle">スキル</p>
                 </a>
               </li>
               <li class="l-header__item">
-                <a class="l-header__item-link" href="#">
+                <a
+                  class="l-header__item-link"
+                  href="#"
+                  data-target=".p-index-works"
+                >
                   <p class="l-header__item-maintitle">WORKS</p>
                   <p class="l-header__item-subtitle">実績</p>
                 </a>
               </li>
               <li class="l-header__item">
-                <a class="l-header__item-link" href="#">
+                <a
+                  class="l-header__item-link"
+                  href="#"
+                  data-target=".p-index-contact"
+                >
                   <p class="l-header__item-maintitle">CONTACT</p>
                   <p class="l-header__item-subtitle">お問い合わせ</p>
                 </a>
@@ -88,25 +113,41 @@
         <nav class="l-header__sp-nav js-nav">
           <ul class="l-header__sp-nav-items">
             <li class="l-header__sp-nav-item">
-              <a href="">
+              <a
+                class="l-header__sp-nav-link"
+                href="#"
+                data-target=".p-index-profile"
+              >
                 <p class="l-header__sp-nav-item-main">PROFILE</p>
                 <p class="l-header__sp-nav-item-sub">プロフィール</p>
               </a>
             </li>
             <li class="l-header__sp-nav-item">
-              <a href="">
+              <a
+                class="l-header__sp-nav-link"
+                href="#"
+                data-target=".p-index-skill"
+              >
                 <p class="l-header__sp-nav-item-main">SKILL</p>
                 <p class="l-header__sp-nav-item-sub">スキル</p>
               </a>
             </li>
             <li class="l-header__sp-nav-item">
-              <a href="">
+              <a
+                class="l-header__sp-nav-link"
+                href="#"
+                data-target=".p-index-works"
+              >
                 <p class="l-header__sp-nav-item-main">WORKS</p>
                 <p class="l-header__sp-nav-item-sub">実績</p>
               </a>
             </li>
             <li class="l-header__sp-nav-item">
-              <a href="">
+              <a
+                class="l-header__sp-nav-link"
+                href="#"
+                data-target=".p-index-contact"
+              >
                 <p class="l-header__sp-nav-item-main">CONTACT</p>
                 <p class="l-header__sp-nav-item-sub">お問い合わせ</p>
               </a>
@@ -175,7 +216,9 @@
                   </h2>
                 </div>
                 <div class="p-index-profile__timeline">
-                  <p class="p-index-profile__timeline-title">TIMELINE</p>
+                  <p class="p-index-profile__timeline-title" data-trigger>
+                    TIMELINE
+                  </p>
 
                   <ul class="p-index-profile__timeline-events">
                     <li class="p-index-profile__timeline-event">
@@ -297,7 +340,9 @@
                           Web制作/Web開発をメインとした会社へ転職活動を決意
                         </p>
                       </div>
-                      <p class="p-index-profile__timeline-now">Now</p>
+                      <p class="p-index-profile__timeline-now" data-trigger>
+                        Now
+                      </p>
                       <label
                         class="p-index-profile__timeline-event-icon-bottom"
                       ></label>
@@ -504,33 +549,39 @@
             <div class="p-index-works__list">
               <ul class="p-index-works__list-inner">
                 <li class="p-index-works__item">
-                  <a
-                    class="p-index-works__content-img"
-                    style="background-image: url(assets/img/wayukai.png)"
-                    href="#"
-                  ></a>
+                  <div class="p-index-works__content-img-wrapper">
+                    <a
+                      class="p-index-works__content-img"
+                      style="background-image: url(assets/img/wayukai.png)"
+                      href="#"
+                    ></a>
+                  </div>
                   <p class="p-index-works__content-text">
                     NPO法人 和有会様のWebサイトリニューアル
                   </p>
                 </li>
                 <li class="p-index-works__item">
-                  <a
-                    class="p-index-works__content-img"
-                    style="background-image: url(assets/img/portforio.png)"
-                    href="#"
-                  ></a>
+                  <div class="p-index-works__content-img-wrapper">
+                    <a
+                      class="p-index-works__content-img"
+                      style="background-image: url(assets/img/portforio.png)"
+                      href="#"
+                    ></a>
+                  </div>
                   <p class="p-index-works__content-text">
                     当ポートフォリオサイトの制作
                   </p>
                 </li>
                 <li class="p-index-works__item">
-                  <a
-                    class="p-index-works__content-img"
-                    style="
-                      background-image: url(assets/img/valentaine-banner.png);
-                    "
-                    href="#"
-                  ></a>
+                  <div class="p-index-works__content-img-wrapper">
+                    <a
+                      class="p-index-works__content-img"
+                      style="
+                        background-image: url(assets/img/valentaine-banner.png);
+                      "
+                      href="#"
+                    ></a>
+                  </div>
                   <p class="p-index-works__content-text">
                     バレンタイン向けバナー制作
                   </p>

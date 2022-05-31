@@ -424,7 +424,13 @@ button {
   right: 20px;
 }
 .c-button:hover {
-  opacity: 0.6;
+  background-color: #fff;
+  color: #044fa7;
+  border: 2px solid #044fa7;
+}
+.c-button:hover:after {
+  background: url("/assets/img/chevron-thin-right_revers.png") no-repeat;
+  background-size: contain;
 }
 .c-button--medium {
   width: 60%;
@@ -593,6 +599,13 @@ button {
   font-weight: bold;
   margin-bottom: 48px;
 }
+.p-index-profile__timeline-title.visible, .p-index-profile__timeline-title.invisible {
+  transform: translateX(0);
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.p-index-profile__timeline-title.invisible {
+  transform: translateX(-100px);
+}
 .p-index-profile__timeline-events {
   margin: 0 auto;
   position: relative;
@@ -702,6 +715,13 @@ button {
   .p-index-profile__timeline-now {
     top: -10px;
   }
+}
+.p-index-profile__timeline-now.visible, .p-index-profile__timeline-now.invisible {
+  transform: translateX(0);
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.p-index-profile__timeline-now.invisible {
+  transform: translateX(-100px);
 }
 
 .p-index-skill {
@@ -884,6 +904,9 @@ button {
     width: 80%;
   }
 }
+.p-index-works__content-img-wrapper {
+  overflow: hidden;
+}
 .p-index-works__content-img {
   display: block;
   width: 100%;
@@ -892,9 +915,12 @@ button {
   background-size: cover;
   background-position: top center;
   margin-bottom: 16px;
+  transition: 0.5s all;
 }
 .p-index-works__content-img:hover {
   opacity: 0.6;
+  transform: scale(1.1, 1.1);
+  transition: 0.5s all;
 }
 .p-index-works__content-text {
   font-size: 1rem;
