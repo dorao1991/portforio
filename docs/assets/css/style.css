@@ -625,7 +625,7 @@ button {
 }
 
 .p-index-mv {
-  height: 100vh;
+  height: calc(100vh - 90px);
   background-image: url(../img/main-visual.png);
   background-size: cover;
   background-position: center;
