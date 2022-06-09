@@ -1,0 +1,36 @@
+.c-work {
+  &__item {
+    width: 28%;
+    margin-bottom: 72px;
+    @include mq(md) {
+      width: 40%;
+    }
+    @include mq(sm) {
+      width: 80%;
+    }
+  }
+  &__content-img-wrapper {
+    overflow: hidden;
+  }
+  &__content-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    margin-bottom: 16px;
+    transition: 0.5s all;
+    &:hover {
+      opacity: 0.6;
+      transform: scale(1.1, 1.1);
+      transition: 0.5s all;
+    }
+  }
+  &__content-text {
+    font-size: rem(18);
+    @include mq(sm) {
+      font-size: 14px;
+    }
+  }
+}

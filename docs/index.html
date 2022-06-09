@@ -52,7 +52,7 @@
       <header class="l-header">
         <div class="l-header__inner">
           <div class="l-header__logo">
-            <a class="l-header__logo-link" href="#">
+            <a class="l-header__logo-link" href="index.html">
               <img
                 class="l-header__logo-img"
                 src="assets/img/logo-black.png"
@@ -83,13 +83,9 @@
                 </a>
               </li>
               <li class="l-header__item">
-                <a
-                  class="l-header__item-link"
-                  href="#"
-                  data-target=".p-index-works"
-                >
+                <a class="l-header__item-link" href="works.html">
                   <p class="l-header__item-maintitle">WORKS</p>
-                  <p class="l-header__item-subtitle">実績</p>
+                  <p class="l-header__item-subtitle">実績一覧</p>
                 </a>
               </li>
               <li class="l-header__item">
@@ -110,46 +106,42 @@
             </button>
           </nav>
         </div>
-        <nav class="l-header__sp-nav js-nav">
-          <ul class="l-header__sp-nav-items">
-            <li class="l-header__sp-nav-item">
+        <nav class="l-drawer__sp-nav js-nav">
+          <ul class="l-drawer__sp-nav-items">
+            <li class="l-drawer__sp-nav-item">
               <a
-                class="l-header__sp-nav-link"
+                class="l-drawer__sp-nav-link"
                 href="#"
                 data-target=".p-index-profile"
               >
-                <p class="l-header__sp-nav-item-main">PROFILE</p>
-                <p class="l-header__sp-nav-item-sub">プロフィール</p>
+                <p class="l-drawer__sp-nav-item-main">PROFILE</p>
+                <p class="l-drawer__sp-nav-item-sub">プロフィール</p>
               </a>
             </li>
-            <li class="l-header__sp-nav-item">
+            <li class="l-drawer__sp-nav-item">
               <a
-                class="l-header__sp-nav-link"
+                class="l-drawer__sp-nav-link"
                 href="#"
                 data-target=".p-index-skill"
               >
-                <p class="l-header__sp-nav-item-main">SKILL</p>
-                <p class="l-header__sp-nav-item-sub">スキル</p>
+                <p class="l-drawer__sp-nav-item-main">SKILL</p>
+                <p class="l-drawer__sp-nav-item-sub">スキル</p>
               </a>
             </li>
-            <li class="l-header__sp-nav-item">
-              <a
-                class="l-header__sp-nav-link"
-                href="#"
-                data-target=".p-index-works"
-              >
-                <p class="l-header__sp-nav-item-main">WORKS</p>
-                <p class="l-header__sp-nav-item-sub">実績</p>
+            <li class="l-drawer__sp-nav-item">
+              <a class="l-drawer__sp-nav-link" href="works.html">
+                <p class="l-drawer__sp-nav-item-main">WORKS</p>
+                <p class="l-drawer__sp-nav-item-sub">実績</p>
               </a>
             </li>
-            <li class="l-header__sp-nav-item">
+            <li class="l-drawer__sp-nav-item">
               <a
-                class="l-header__sp-nav-link"
+                class="l-drawer__sp-nav-link"
                 href="#"
                 data-target=".p-index-contact"
               >
-                <p class="l-header__sp-nav-item-main">CONTACT</p>
-                <p class="l-header__sp-nav-item-sub">お問い合わせ</p>
+                <p class="l-drawer__sp-nav-item-main">CONTACT</p>
+                <p class="l-drawer__sp-nav-item-sub">お問い合わせ</p>
               </a>
             </li>
           </ul>
@@ -170,7 +162,7 @@
             </p>
           </div>
         </section>
-        <section class="p-index-profile">
+        <section class="p-index-profile" id="profile-jump">
           <div class="p-index-profile__inner">
             <div class="p-index-profile__heading">
               <div class="c-heading">
@@ -192,10 +184,7 @@
                     エンジニアとして働きながらWeb制作に挑戦
                   </h3>
                   <p class="p-index-profile__aboutme-text">
-                    1991年生まれの30歳。
-                    2016年に通信機器メーカーに入社後エンジニアとして勤務を開始し、主に通信機器を操作する為のWeb周りの開発を担当。
-                    2020年頃、趣味であるサーフィン繋がりから知り合いのサーフショップのWebサイト制作を頼まれたことをきっかけに、2021年頃から本格的にWeb制作の活動を行なう。
-                    エンジニア職で培ったコーディング力やWeb技術の知見を活かしつつ、デザインにも挑戦し幅広いスキルを持ったエンジニアを目指す。
+                    1991年生まれの30歳。2016年に通信機器メーカーに入社後エンジニアとして勤務を開始し、主に通信機器を操作する為のWeb周りの開発を担当。2020年頃、趣味であるサーフィン繋がりから知り合いのサーフショップのWebサイト制作を頼まれたことをきっかけに、2021年頃から本格的にWeb制作の活動を行なう。エンジニア職で培ったコーディング力やWeb技術の知見を活かしつつ、デザインにも挑戦し幅広いスキルを持ったエンジニアを目指す。
                   </p>
                 </div>
               </div>
@@ -311,7 +300,7 @@
                           2021/06
                         </p>
                         <p class="p-index-profile__timeline-event-text">
-                          通信機器のGUI改修を一部担当。本業でもフロントエンド開発に携わるようになる
+                          通信機器のGUI改修を一部担当。<br />本業でもフロントエンド開発に携わるようになる
                         </p>
                       </div>
                     </li>
@@ -353,7 +342,7 @@
             </section>
           </div>
         </section>
-        <section class="p-index-skill">
+        <section class="p-index-skill" id="skill-jump">
           <div class="p-index-skill__inner">
             <div class="p-index-skill__heading">
               <div class="c-heading">
@@ -368,7 +357,7 @@
                     <img
                       class="p-index-skill__skill-img"
                       src="assets/img/htmlcss-icon.png"
-                      alt="PHPアイコン"
+                      alt="HTML/CSSアイコン"
                     />
                     <p class="p-index-skill__skill-name">HTML/CSS</p>
                     <p class="p-index-skill__skill-year">
@@ -407,8 +396,7 @@
                       経験年数 <span class="u-color-main">2年〜</span>
                     </p>
                     <p class="p-index-skill__skill-text">
-                      オリジナルテーマの開発、テーマのカスタマイズが出来ます。
-                      当サイトもオリジナルテーマとしてWordPress管理画面から修正や追加を行うようにしています。
+                      オリジナルテーマの開発、テーマのカスタマイズが出来ます。当サイトもオリジナルテーマとしてWordPress管理画面から修正や追加を行うようにしています。
                     </p>
                   </div>
                 </li>
@@ -419,9 +407,9 @@
                       src="assets/img/php-icon.png"
                       alt="PHPアイコン"
                     />
-                    <p class="p-index-skill__skill-name">WordPress</p>
+                    <p class="p-index-skill__skill-name">PHP</p>
                     <p class="p-index-skill__skill-year">
-                      経験年数 <span class="u-color-main">4年〜</span>
+                      経験年数 <span class="u-color-main">5年〜</span>
                     </p>
                     <p class="p-index-skill__skill-text">
                       PHPを使用したサーバーサイド開発が出来ます。Laravelを使用したAPI開発の経験もあります。
@@ -440,8 +428,7 @@
                       経験年数 <span class="u-color-main">2年〜</span>
                     </p>
                     <p class="p-index-skill__skill-text">
-                      PhotoshopやXDを使用してデザインカンプを作成することが出来ます。
-                      当サイトも自らワイヤーフレームからデザインカンプを作成しデザインしました。
+                      PhotoshopやXDを使用してデザインカンプを作成することが出来ます。当サイトも自らワイヤーフレームからデザインカンプを作成しデザインしました。
                     </p>
                   </div>
                 </li>
@@ -454,11 +441,10 @@
                     />
                     <p class="p-index-skill__skill-name">Git</p>
                     <p class="p-index-skill__skill-year">
-                      経験年数 <span class="u-color-main">6年〜</span>
+                      経験年数 <span class="u-color-main">5年〜</span>
                     </p>
                     <p class="p-index-skill__skill-text">
-                      Gitを使用したチーム開発が出来ます。
-                      コマンド操作はもちろん、チーム内におけるマージトラブルを対応した経験もあります。
+                      Gitを使用したチーム開発が出来ます。コマンド操作はもちろん、チーム内におけるマージトラブルを対応した経験もあります。
                     </p>
                   </div>
                 </li>
@@ -492,7 +478,7 @@
                         Linux環境での開発経験
                       </p>
                       <p class="p-index-skill__more-skill-item-text">
-                        Linuxで環境で開発した経験があり、基本的なコマンド操作が可能です。LinuxOSに対する知識を保有しています。
+                        Linux環境で6年間開発した経験があります。LinuxOSに対する知識を保有しています。
                       </p>
                     </div>
                   </li>
@@ -509,7 +495,7 @@
                         通信ネットワーク技術
                       </p>
                       <p class="p-index-skill__more-skill-item-text">
-                        通信機器の開発の経験からTCP/IPやEthernetに関する一般的な知識を保有しています。
+                        通信機器の開発の経験があり、TCP/IPやEthernetなどに対する一般的なネットワークの知識を保有しています。
                       </p>
                     </div>
                   </li>
@@ -526,7 +512,7 @@
                         SQLを用いたアプリケーション開発経験
                       </p>
                       <p class="p-index-skill__more-skill-item-text">
-                        SQLiteとpostgreSQLを使用し開発を行なった経験があり、SQL文に対する知識を保有しています。
+                        SQLiteとpostgreSQLを使用し開発を行なった経験があり、SQLに対する知識を保有しています。
                       </p>
                     </div>
                   </li>
@@ -543,57 +529,59 @@
                 <p class="c-heading__subtitle">実績</p>
               </div>
               <p class="p-index-works__heading-text">
-                今までに制作した実績を掲載します
+                今までに制作した実績を掲載しています
               </p>
             </div>
             <div class="p-index-works__list">
               <ul class="p-index-works__list-inner">
-                <li class="p-index-works__item">
-                  <div class="p-index-works__content-img-wrapper">
+                <li class="c-work__item">
+                  <div class="c-work__content-img-wrapper">
                     <a
-                      class="p-index-works__content-img"
+                      class="c-work__content-img"
                       style="background-image: url(assets/img/wayukai.png)"
-                      href="#"
+                      href="worktemplate.html"
                     ></a>
                   </div>
-                  <p class="p-index-works__content-text">
+                  <p class="c-work__content-text">
                     NPO法人 和有会様のWebサイトリニューアル
                   </p>
                 </li>
-                <li class="p-index-works__item">
-                  <div class="p-index-works__content-img-wrapper">
+                <li class="c-work__item">
+                  <div class="c-work__content-img-wrapper">
                     <a
-                      class="p-index-works__content-img"
+                      class="c-work__content-img"
                       style="background-image: url(assets/img/portforio.png)"
-                      href="#"
+                      href="worktemplate3.html"
                     ></a>
                   </div>
-                  <p class="p-index-works__content-text">
+                  <p class="c-work__content-text">
                     当ポートフォリオサイトの制作
                   </p>
                 </li>
-                <li class="p-index-works__item">
-                  <div class="p-index-works__content-img-wrapper">
+                <li class="c-work__item">
+                  <div class="c-work__content-img-wrapper">
                     <a
-                      class="p-index-works__content-img"
+                      class="c-work__content-img"
                       style="
                         background-image: url(assets/img/valentaine-banner.png);
                       "
-                      href="#"
+                      href="worktemplate2.html"
                     ></a>
                   </div>
-                  <p class="p-index-works__content-text">
-                    バレンタイン向けバナー制作
+                  <p class="c-work__content-text">
+                    バレンタイン用チョコレートバナー
                   </p>
                 </li>
               </ul>
             </div>
             <div class="p-index-works__button">
-              <a href="#!" class="c-button c-button--medium">実績一覧</a>
+              <a href="works.html" class="c-button c-button--medium"
+                >実績一覧</a
+              >
             </div>
           </div>
         </section>
-        <section class="p-index-contact">
+        <section class="p-index-contact" id="contact-jump">
           <div class="p-index-contact__inner">
             <div class="p-index-contact__heading">
               <div class="c-heading">
@@ -604,37 +592,33 @@
                 お仕事のご依頼、ご相談などお気軽にご連絡ください
               </p>
             </div>
-            <div class="p-index-contact__form">
-              <div class="p-index-contact__form-item-wrapper">
-                <label class="p-index-contact__form-label" for="name"
-                  >氏名・会社名</label
-                >
+            <div class="c-form">
+              <div class="c-form__item-wrapper">
+                <label class="c-form__label" for="name">氏名・会社名</label>
                 <input
-                  class="p-index-contact__form-input"
+                  class="c-form__input"
                   id="name"
                   type="text"
                   name="name"
                   placeholder="氏名・会社名を入力してください"
                 />
               </div>
-              <div class="p-index-contact__form-item-wrapper">
-                <label class="p-index-contact__form-label" for="e-mail"
-                  >メールアドレス</label
-                >
+              <div class="c-form__item-wrapper">
+                <label class="c-form__label" for="e-mail">メールアドレス</label>
                 <input
-                  class="p-index-contact__form-input"
+                  class="c-form__input"
                   id="e-mail"
                   type="email"
                   name="email"
                   placeholder="メールアドレスを入力してください"
                 />
               </div>
-              <div class="p-index-contact__form-item-wrapper">
-                <label class="p-index-contact__form-label" for="message"
+              <div class="c-form__item-wrapper c-form__item-wrapper--longtall">
+                <label class="c-form__label" for="message"
                   >お問い合わせ内容</label
                 >
                 <textarea
-                  class="p-index-contact__form-input p-index-contact__form-input--longtall"
+                  class="c-form__input c-form__input--longtall"
                   placeholder="お問い合わせ内容を入力してください"
                   id="message"
                   name="comment"

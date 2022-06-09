@@ -1,5 +1,5 @@
 .l-header {
-  height: 100px;
+  height: 90px;
   position: fixed;
   top: 0;
   right: 0;
@@ -18,6 +18,9 @@
   }
   &__logo-img {
     width: 234px;
+    @include mq(sm) {
+      width: 180px;
+    }
   }
   &__list {
     display: flex;
@@ -48,7 +51,8 @@
   }
   &__item-maintitle {
     font-weight: bold;
-    font-size: rem(24);
+    font-size: rem(22);
+    line-height: 1.4;
   }
   &__item-subtitle {
     font-size: rem(12);
@@ -56,7 +60,7 @@
   }
   /* ハンバーガーメニュー */
   &__hamberger {
-    width: 48px;
+    width: 40px;
     height: 100%;
     background-color: transparent;
     border-color: transparent;

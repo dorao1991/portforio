@@ -25,3 +25,21 @@ $mq-breakpoints: (
   justify-content: $justify;
   align-items: $align;
 }
+
+/* アニメーション前のスタイル */
+.js-marker {
+  display: inline;
+  // position: relative;
+  background-image: linear-gradient(
+    90deg,
+    #57a4ff,
+    #57a4ff
+  ); /* 単色の場合は同じ色、グラデーションさせる場合は別々の色 */
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0 30%; /* '30%'の部分にマーカーの太さを記入 */
+  transition: all 1s ease-in-out; /* マーカーを引く速度を調整 */
+  @include mq(tab) {
+    background-size: 0 30%;
+  }
+}

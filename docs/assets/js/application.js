@@ -22,6 +22,16 @@ function hamburger() {
 }
 
 function scrollPage() {
+  const fileFullName = window.location.href.split("/").pop();
+  // WPにも対応できるように拡張子は除外する
+  const fileName = fileFullName.split(".").shift();
+
+  // ファイル名がindex以外であれば何もしない
+  if (fileName != "index") {
+    console.log(fileName);
+    return;
+  }
+
   let spNavLinks = document.querySelectorAll("a[data-target]");
   spNavLinks.forEach(function (element) {
     element.addEventListener("click", (e) => {
@@ -29,14 +39,14 @@ function scrollPage() {
       e.preventDefault();
       // クリックされたナビアイテムのclass名を取得する
       className = element.getAttribute("data-target");
-      pos = document.querySelector(className).offsetTop - 100;
+      pos = document.querySelector(className).offsetTop - 90;
       $("html,body").animate({ scrollTop: pos }, 400);
     });
   });
 }
 
 function closeSpNav() {
-  let spNavLinks = document.querySelectorAll(".l-header__sp-nav-link");
+  let spNavLinks = document.querySelectorAll(".l-drawer__sp-nav-link");
   for (var i = 0; i < spNavLinks.length; i++) {
     spNavLinks[i].addEventListener("click", function () {
       document.querySelector(".js-nav").classList.remove("active");

@@ -1,0 +1,40 @@
+.c-form {
+  max-width: 600px;
+  margin: 0 auto;
+  @include mq(md) {
+    width: 100%;
+  }
+  @include mq(sm) {
+    width: 100%;
+  }
+
+  &__item-wrapper {
+    @include flexCentering(space-between);
+    &--longtall {
+      @include flexCentering(space-between, flex-start);
+    }
+    margin-bottom: 50px;
+    @include mq(sm) {
+      display: block;
+    }
+  }
+  &__label {
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  &__input {
+    width: 60%;
+    height: 2em;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include mq(sm) {
+      width: 100%;
+    }
+    &--longtall {
+      padding-top: 5px;
+      height: 10em;
+    }
+  }
+}
